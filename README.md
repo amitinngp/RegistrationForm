@@ -32,6 +32,6 @@ Pre-requisite :
 - npm i --save-dev enzyme enzyme-adapter-react-16
 
 Comand to run
-- npm start
-- npm test
+- npm start( To start the application)
+- npm test ( To test the application)
 
