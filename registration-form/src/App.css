@@ -1,0 +1,129 @@
+#root {
+  display: flex;
+}
+.formInput {
+  margin-bottom: 20px;
+}
+.error {
+  color: red;
+}
+.form-container {
+  height: 100vh;
+  width: 50vw;
+  background-image: radial-gradient(
+      circle at center center,
+      transparent,
+      rgb(255, 255, 255)
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgb(255, 255, 255) 0px,
+      rgb(255, 255, 255) 12px,
+      transparent 12px,
+      transparent 19px,
+      rgb(255, 255, 255) 19px,
+      rgb(255, 255, 255) 24px,
+      transparent 24px,
+      transparent 28px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgb(245, 245, 245) 0px,
+      rgb(245, 245, 245) 7px,
+      transparent 7px,
+      transparent 14px
+    ),
+    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+}
+.form-box {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  margin: 5% auto;
+  background-image: radial-gradient(
+      circle at center center,
+      rgba(33, 33, 33, 0),
+      rgb(33, 33, 33)
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgb(33, 33, 33) 0px,
+      rgb(33, 33, 33) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgb(56, 56, 56) 0px,
+      rgb(56, 56, 56) 5px,
+      transparent 5px,
+      transparent 6px
+    ),
+    linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
+  box-shadow: 0 8px 6px -6px black;
+}
+.input {
+  width: 15vw;
+  height: 4vh;
+  margin-top: 10px;
+}
+
+.label {
+  color: whitesmoke;
+  margin-left: 10px;
+}
+.control {
+  margin-left: 36px;
+}
+.title {
+  width: 100%;
+  color: whitesmoke;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  font-family: fantasy;
+}
+.register {
+  width: 225px;
+  height: 33px;
+  border-radius: 7px;
+  margin-top: 17px;
+}
+.error-message {
+  color: whitesmoke;
+  justify-content: center;
+  text-align: center;
+  margin-top: 45px;
+}
+.form-field {
+  justify-content: space-between;
+  text-align: center;
+  display: flex;
+  margin-top: 10px;
+}
+.form-error {
+  color: red;
+  height: 10vh;
+  margin-left: 10px;
+}
+
+.formInput {
+  color: black;
+  justify-self: center;
+  width: 213px;
+  height: 24px;
+  border-radius: 5px;
+}
+.field {
+  margin-right: 20px;
+}
+.btnRegister {
+  display: flex;
+  float: right;
+  margin-right: 20px;
+}
+.valueSubmitted{
+  color: whitesmoke;
+  margin-top: 88px;
+  word-wrap: break-word;
+}
