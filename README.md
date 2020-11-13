@@ -20,3 +20,18 @@ I also tried to cover the topics realted to test using Jest and enzyme by writin
 mismatch of verison between enzyme and React i was getting few errors, which took some time to get resolved.
 
 I will continue to update it, in future too.
+
+### How to run application
+
+Pre-requisite :
+# To install formik (Form) and yup {validation schema}
+- npm install formik yup 
+# To install enzyme for test cases
+- npm install enzyme
+- npm install enzyme-adapter-react-16
+- npm i --save-dev enzyme enzyme-adapter-react-16
+
+Comand to run
+- npm start
+- npm test
+
