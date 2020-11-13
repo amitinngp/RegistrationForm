@@ -37,4 +37,4 @@ Comand to run
 - npm test ( To test the application)
 
 ![alt text](https://github.com/amitinngp/RegistrationForm/blob/main/Two%20ways%20of%20implementation.png)
-![](https://github.com/amitinngp/RegistrationForm/blob/main/ErrorMsg.png | width=100)
+
