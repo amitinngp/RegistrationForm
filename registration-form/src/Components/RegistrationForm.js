@@ -31,7 +31,7 @@ const RegistrationForm = () => {
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.userName || ""}
-            placeholder="Please enter user name!"
+            placeholder="Please enter your email!"
             required
             autoComplete="off"
           />

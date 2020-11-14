@@ -4,7 +4,10 @@ export default function Validators(values) {
 
     if(!values.userName){
       errors.userName = 'User Name is required';
-      } else if (values.userName.length < 8) {
+      }else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.userName)) {
+         errors.userName = 'Invalid email format'
+      }
+      else if (values.userName.length < 8) {
       errors.userName = 'User Name must be 8 or more characters';
     }
      if(!values.password){

@@ -14,6 +14,7 @@ function FormikRegistrationForm() {
   //This text can be stored in others files for i18n implementation, but for now i am using as string.
   const validationSchema = Yup.object({
     userName: Yup.string()
+      .email('Invalid email format')
       .min(8, "User Name must be 8 characters and above.")
       .max(16, "User Name max 16 characters allowed.")
       .required("User Name Required"),
@@ -51,7 +52,7 @@ function FormikRegistrationForm() {
                 type="text"
                 label="User Name"
                 name="userName"
-                placeholder="Please enter user name!"
+                placeholder="Please enter your email!"
               />
               <FormInput
                 className="formInput"
