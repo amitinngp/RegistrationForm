@@ -42,7 +42,7 @@ Comand to run
 MY learning while building it.
 - Formik took less time and clean and redable code.FormikForm folder in src
 - Although its easier to implement, it requires a learning curve to implement and sometime hard to debug.
-- If we write our own custom code for this taks like i used in Components, we may have better hold changes and implementation.
+- If we write our own custom code for it may takes more time like i used in RegistrationForm Components, but we may have better hold on changes and implementation.
 - Both are easy to customize. although Formik requires external bundle to include.
 - Formik is good solution to manage the form state,although if are making our own custom , that will give more flexibility in terms of modification and extension.
 - It depends on time and resource, which approch is good.
