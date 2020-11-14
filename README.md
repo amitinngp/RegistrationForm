@@ -38,3 +38,26 @@ Comand to run
 
 ![alt text](https://github.com/amitinngp/RegistrationForm/blob/main/Two%20ways%20of%20implementation.png)
 
+
+MY learning while building it.
+- Formik took less time and clean and redable code.FormikForm folder in src
+- Although its easier to implement, it requires a learning curve to implement and sometime hard to debug.
+- If we write our own custom code for this taks like i used in Components, we may have better hold changes and implementation.
+- Both are easy to customize. although Formik requires external bundle to include.
+- Formik is good solution to manage the form state,although if are making our own custom , that will give more flexibility in terms of modification and extension.
+- It depends on time and resource, which approch is good.
+- If you are thinking that code in RegistrationForm.js is repeatative the i agree with you.we can change the below code to similar to FormInput.js to make it more cleaner, but in order to understanding the flow i have kept it as it is.May be later i will change it.
+
+```
+<input
+            className="formInput"
+            type="text"
+            name="userName"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.userName || ""}
+            placeholder="Please enter user name!"
+            required
+            autoComplete="off"
+          />
+```          
