@@ -12,27 +12,27 @@ const useRegistrationFrom = (registration ,validationOf) => {
         // we will copy using spread operator and the manupulate the values changes with key:value as targetName:targetValue
         event.persist();
         setValues(values => ({ ...values, [event.target.name]: event.target.value }));
-        setFormRegistered(true); 
-        setError(validationOf(values));
     }
     const handleSubmit = (event) => {
         if(event)  {
             event.preventDefault();
         } 
         setFormRegistered(true); 
-        setError(validationOf(values));
     }
 
     useEffect(() => {
-        setValues(()=> values);
         setFormRegistered(true); 
-        setError(validationOf(values));
+        if(Object.keys(values).length > 0){
+            setError(validationOf(values));
+        }
     },[values,validationOf]);
 
     useEffect(() => {
         if (Object.keys(errors).length === 0 && isRegistered) {
-            setValidate(true)
+            setValidate(true);
             registration();
+        }else{
+            setValidate(false);
         }
       }, [errors, isRegistered ,registration]);
     return {
