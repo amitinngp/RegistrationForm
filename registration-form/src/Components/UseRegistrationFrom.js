@@ -28,7 +28,7 @@ const useRegistrationFrom = (registration ,validationOf) => {
     },[values,validationOf]);
 
     useEffect(() => {
-        if (Object.keys(errors).length === 0 && isRegistered) {
+        if (Object.keys(errors).length === 0 && isRegistered && Object.keys(values).length > 0) {
             setValidate(true);
             registration();
         }else{

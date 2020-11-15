@@ -3,10 +3,6 @@ import useRegistrationFrom from "./UseRegistrationFrom";
 import Validators from "./Validators";
 
 const RegistrationForm = () => {
-  // const { values, handleChange, handleSubmit, errors ,handleBlur,isRegistered ,dirtyCheck,isValid} = useRegistrationFrom(
-  //   registration,
-  //   Validators
-  // );
   const { values, handleChange,handleSubmit, errors ,isValid} = useRegistrationFrom(
     registration,
     Validators
