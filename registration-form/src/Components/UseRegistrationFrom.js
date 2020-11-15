@@ -27,7 +27,7 @@ const useRegistrationFrom = (registration ,validationOf) => {
         setValues(()=> values);
         setFormRegistered(true); 
         setError(validationOf(values));
-    },[values]);
+    },[values,validationOf]);
 
     useEffect(() => {
         if (Object.keys(errors).length === 0 && isRegistered) {

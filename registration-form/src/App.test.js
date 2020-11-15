@@ -1,5 +1,3 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
 import React from 'react';
 import {mount} from 'enzyme';
 import FormikRegistrationForm from "./FormikForm/FormikRegistrationForm";
@@ -17,10 +15,6 @@ let component;
   const findByClass = (component,attr)=>{
     const wrapper = component.find(`.${attr}`);
     return wrapper;
-}
-const findById = (component,attr)=>{
-  const wrapper = component.find(`#${attr}`);
-  return wrapper;
 }
 
 describe('Test #FormikRegistrationForm',()=>{
