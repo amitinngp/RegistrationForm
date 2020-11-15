@@ -7,12 +7,13 @@ const useRegistrationFrom = (registration ,validationOf) => {
     const [errors, setError] = useState({});
     const [isRegistered, setFormRegistered] = useState(false);
     const [dirtyCheck, setdirtyCheck] = useState({});
+    const [isValid, setValidate] = useState(false);
 
     const handleChange = (event) => {
         // we will copy using spread operator and the manupulate the values changes with key:value as targetName:targetValue
         event.persist();
         setValues(values => ({ ...values, [event.target.name]: event.target.value }));
-        setFormRegistered({checked:true}); 
+        setFormRegistered(true); 
         setError(validationOf(values));
     }
     const handleSubmit = (event) => {
@@ -25,6 +26,9 @@ const useRegistrationFrom = (registration ,validationOf) => {
 
     const handleBlur = (event) => {
         setdirtyCheck({...dirtyCheck,[event.target.name]:event.target.value});
+        if(Object.keys(dirtyCheck).length > 2 && Object.keys(errors).length===0){
+            setValidate(true);
+        }
         setFormRegistered(false); 
         setError(validationOf(values));
     }
@@ -40,7 +44,8 @@ const useRegistrationFrom = (registration ,validationOf) => {
         errors,
         handleBlur,
         isRegistered,
-        dirtyCheck
+        dirtyCheck,
+        isValid
       }
 }
 

@@ -3,7 +3,7 @@ import useRegistrationFrom from "./UseRegistrationFrom";
 import Validators from "./Validators";
 
 const RegistrationForm = () => {
-  const { values, handleChange, handleSubmit, errors ,handleBlur,isRegistered ,dirtyCheck} = useRegistrationFrom(
+  const { values, handleChange, handleSubmit, errors ,handleBlur,isRegistered ,dirtyCheck,isValid} = useRegistrationFrom(
     registration,
     Validators
   );
@@ -45,7 +45,7 @@ const RegistrationForm = () => {
             type="password"
             name="password"
             onChange={handleChange}
-            onBlur={handleSubmit}
+            onBlur={handleBlur}
             value={values.password || ""}
             placeholder="Please enter password!"
             required
@@ -67,7 +67,7 @@ const RegistrationForm = () => {
           /></div>
           </div>
           <div className="btnRegister">
-            <button type="button" type="submit" className="register" disabled={(Object.keys(dirtyCheck).length > 2)}>
+            <button type="button" type="submit" className="register" disabled={!isValid}>
               Register
             </button>
           </div>
