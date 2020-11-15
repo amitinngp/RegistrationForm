@@ -6,7 +6,6 @@ const useRegistrationFrom = (registration ,validationOf) => {
     const [values, setValues] = useState({}); 
     const [errors, setError] = useState({});
     const [isRegistered, setFormRegistered] = useState(false);
-    const [dirtyCheck, setdirtyCheck] = useState({});
     const [isValid, setValidate] = useState(false);
 
     const handleChange = (event) => {
@@ -24,16 +23,15 @@ const useRegistrationFrom = (registration ,validationOf) => {
         setError(validationOf(values));
     }
 
-    const handleBlur = (event) => {
-        setdirtyCheck({...dirtyCheck,[event.target.name]:event.target.value});
-        if(Object.keys(dirtyCheck).length > 2 && Object.keys(errors).length===0){
-            setValidate(true);
-        }
-        setFormRegistered(false); 
+    useEffect(() => {
+        setValues(()=> values);
+        setFormRegistered(true); 
         setError(validationOf(values));
-    }
+    },[values]);
+
     useEffect(() => {
         if (Object.keys(errors).length === 0 && isRegistered) {
+            setValidate(true)
             registration();
         }
       }, [errors, isRegistered ,registration]);
@@ -42,9 +40,6 @@ const useRegistrationFrom = (registration ,validationOf) => {
         handleChange,
         handleSubmit,
         errors,
-        handleBlur,
-        isRegistered,
-        dirtyCheck,
         isValid
       }
 }

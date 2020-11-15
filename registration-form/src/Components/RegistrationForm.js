@@ -3,7 +3,11 @@ import useRegistrationFrom from "./UseRegistrationFrom";
 import Validators from "./Validators";
 
 const RegistrationForm = () => {
-  const { values, handleChange, handleSubmit, errors ,handleBlur,isRegistered ,dirtyCheck,isValid} = useRegistrationFrom(
+  // const { values, handleChange, handleSubmit, errors ,handleBlur,isRegistered ,dirtyCheck,isValid} = useRegistrationFrom(
+  //   registration,
+  //   Validators
+  // );
+  const { values, handleChange,handleSubmit, errors ,isValid} = useRegistrationFrom(
     registration,
     Validators
   );
@@ -29,7 +33,6 @@ const RegistrationForm = () => {
             type="text"
             name="userName"
             onChange={handleChange}
-            onBlur={handleBlur}
             value={values.userName || ""}
             placeholder="Please enter your email!"
             required
@@ -42,10 +45,9 @@ const RegistrationForm = () => {
           <div className="field">
           <input
             className="formInput"
-            type="password"
+            type="text"
             name="password"
             onChange={handleChange}
-            onBlur={handleBlur}
             value={values.password || ""}
             placeholder="Please enter password!"
             required
@@ -57,10 +59,9 @@ const RegistrationForm = () => {
           <div className="field">
           <input
             className="formInput"
-            type="password"
+            type="text"
             name="confirmPassword"
             onChange={handleChange}
-            onBlur={handleBlur}
             value={values.confirmPassword || ""}
             placeholder="Please enter same password again!"
             required
