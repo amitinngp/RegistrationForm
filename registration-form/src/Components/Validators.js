@@ -7,22 +7,16 @@ export default function Validators(values) {
     errors.userName = "Invalid email format";
   } else if (values.userName.length < 8) {
     errors.userName = "User Name must be 8 or more characters";
-  }else{
-   const userName = errors.userName ? delete errors.userName : null;  
   }
   if (!values.password) {
     errors.password = "Password is required";
   } else if (values.password.length < 8) {
     errors.password = "Password must be 8 or more characters";
-  }else{
-   const password = errors.password ? delete errors.password : null;  
   }
   if (!values.confirmPassword) {
     errors.confirmPassword = "Confirm Password is required";
   } else if (values.confirmPassword !== values.password) {
     errors.confirmPassword = "Passwords must match";
-  }else{
-   const confirmPassword = errors.confirmPassword ? delete errors.confirmPassword : null;  
   }
   
   return errors;

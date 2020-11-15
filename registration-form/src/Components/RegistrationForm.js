@@ -68,7 +68,7 @@ const RegistrationForm = () => {
           /></div>
           </div>
           <div className="btnRegister">
-            <button type="button" type="submit" className="register" disabled={!isValid}>
+            <button type="submit" className="register" disabled={!isValid}>
               Register
             </button>
           </div>
