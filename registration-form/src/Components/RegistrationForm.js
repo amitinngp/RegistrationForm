@@ -45,7 +45,7 @@ const RegistrationForm = () => {
           <div className="field">
           <input
             className="formInput"
-            type="text"
+            type="password"
             name="password"
             onChange={handleChange}
             value={values.password || ""}
@@ -59,7 +59,7 @@ const RegistrationForm = () => {
           <div className="field">
           <input
             className="formInput"
-            type="text"
+            type="password"
             name="confirmPassword"
             onChange={handleChange}
             value={values.confirmPassword || ""}
